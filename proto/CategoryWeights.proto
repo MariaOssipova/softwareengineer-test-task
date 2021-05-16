@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+option go_package = "./";
 
 message PeriodRange {
     Period previous_period = 1;
@@ -14,7 +15,7 @@ message Period {
 
 message Category {
     string category_name = 1;
-    int32 ratings = 2;
+    float ratings = 2;
     repeated Score score_for_date = 3;
     Score overall_score = 4;
 }
@@ -25,7 +26,7 @@ message Ticket {
 }
 
 message Score {
-    int32 percentage = 1;
+    float percentage = 1;
 }
 
 service CategoryWeightsService {
