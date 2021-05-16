@@ -1,4 +1,4 @@
-module example.com/m/v2
+module softwareengineer-test-task
 
 go 1.15
 
