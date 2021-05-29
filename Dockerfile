@@ -20,7 +20,7 @@ RUN echo starting && \
 RUN apt-get update -yqq && apt-get -y install cmake
 
 # Install grpc_php_plugin and protoc
-RUN git clone -b v1.36.2 https://github.com/grpc/grpc && \
+RUN git clone -b v1.38.0 https://github.com/grpc/grpc && \
     cd grpc && git submodule update --init && \
     mkdir cmake/build && cd cmake/build && \
     cmake ../.. && make protoc grpc_php_plugin
