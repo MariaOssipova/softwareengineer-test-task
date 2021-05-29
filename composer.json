@@ -1,5 +1,5 @@
 {
-  "name": "mariaossipova/softwareengineer-test-task",
+  "name": "softwareengineer/test-task",
   "description": "Software Engineer Test Task",
   "require": {
     "grpc/grpc": "^v1.30.0",

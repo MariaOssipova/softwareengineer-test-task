@@ -32,8 +32,8 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '1e1ff526e94a267116e8cc8e911c35264de3b2c0',
-    'name' => 'grpc/grpc-demo',
+    'reference' => '10448f6a93d9eb30d99c7f1b40c1380adb4961c0',
+    'name' => 'softwareengineer/test-task',
   ),
   'versions' => 
   array (
@@ -55,14 +55,14 @@ private static $installed = array (
       ),
       'reference' => 'e1687963fb0b087d0c70e75d3bfff9062eaeb215',
     ),
-    'grpc/grpc-demo' => 
+    'softwareengineer/test-task' => 
     array (
       'pretty_version' => 'dev-develop',
       'version' => 'dev-develop',
       'aliases' => 
       array (
       ),
-      'reference' => '1e1ff526e94a267116e8cc8e911c35264de3b2c0',
+      'reference' => '10448f6a93d9eb30d99c7f1b40c1380adb4961c0',
     ),
   ),
 );

@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  softwareengineer_test_task:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: softwareengineer_test_task
