@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package categoryWeights;
+
+
+message PeriodRange {
+    Period previous_period = 1;
+    Period current_period = 2;
+}
+
+message Period {
+    int32 year = 1;
+    int32 month = 2;
+    int32 day = 3;
+}
+
+message Category {
+    string category_name = 1;
+    float ratings = 2;
+    repeated Score score_for_date = 3;
+    Score overall_score = 4;
+}
+
+message Ticket {
+    int32 ticket_id = 1;
+    repeated Score score = 2;
+}
+
+message Score {
+    float percentage = 1;
+}
+
+service CategoryWeightsService {
+    rpc GetScoresByCategoriesForPeriod(Period) returns (Category) {}
+
+    rpc GetScoresByTicketsForPeriod(Period) returns (Ticket) {}
+
+    rpc GetOverallScoreForPeriod(Period) returns (Score) {}
+
+    rpc GetOverallScoreChangeForPeriodRange(PeriodRange) returns (Score) {}
+}
