@@ -27,12 +27,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-develop',
+    'version' => 'dev-develop',
     'aliases' => 
     array (
     ),
-    'reference' => 'ca9102722d075ed5121a3066ba25c328b6ffe980',
+    'reference' => '1e1ff526e94a267116e8cc8e911c35264de3b2c0',
     'name' => 'grpc/grpc-demo',
   ),
   'versions' => 
@@ -57,12 +57,12 @@ private static $installed = array (
     ),
     'grpc/grpc-demo' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-develop',
+      'version' => 'dev-develop',
       'aliases' => 
       array (
       ),
-      'reference' => 'ca9102722d075ed5121a3066ba25c328b6ffe980',
+      'reference' => '1e1ff526e94a267116e8cc8e911c35264de3b2c0',
     ),
   ),
 );
