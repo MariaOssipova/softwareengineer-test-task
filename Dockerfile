@@ -25,9 +25,11 @@ RUN git clone -b v1.36.2 https://github.com/grpc/grpc && \
     mkdir cmake/build && cd cmake/build && \
     cmake ../.. && make protoc grpc_php_plugin
 
-# Setting node, protoc and grpc_php_plugin paths
+# Setting protoc and grpc_php_plugin paths
 ENV PATH "/grpc/cmake/build:${PATH}"
 ENV PATH "/grpc/cmake/build/third_party/protobuf:${PATH}"
 
-# Generate php libraries from proto file
+WORKDIR /var/www
+COPY protos /var/www
 
+RUN mkdir src & make proto
