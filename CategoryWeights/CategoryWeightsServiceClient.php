@@ -1,7 +1,7 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace ;
+namespace CategoryWeights;
 
 /**
  */
@@ -17,58 +17,58 @@ class CategoryWeightsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Period $argument input argument
+     * @param \CategoryWeights\Period $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetScoresByCategoriesForPeriod(\Period $argument,
+    public function GetScoresByCategoriesForPeriod(\CategoryWeights\Period $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/CategoryWeightsService/GetScoresByCategoriesForPeriod',
+        return $this->_simpleRequest('/categoryWeights.CategoryWeightsService/GetScoresByCategoriesForPeriod',
         $argument,
-        ['\Category', 'decode'],
+        ['\CategoryWeights\Category', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Period $argument input argument
+     * @param \CategoryWeights\Period $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetScoresByTicketsForPeriod(\Period $argument,
+    public function GetScoresByTicketsForPeriod(\CategoryWeights\Period $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/CategoryWeightsService/GetScoresByTicketsForPeriod',
+        return $this->_simpleRequest('/categoryWeights.CategoryWeightsService/GetScoresByTicketsForPeriod',
         $argument,
-        ['\Ticket', 'decode'],
+        ['\CategoryWeights\Ticket', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Period $argument input argument
+     * @param \CategoryWeights\Period $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetOverallScoreForPeriod(\Period $argument,
+    public function GetOverallScoreForPeriod(\CategoryWeights\Period $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/CategoryWeightsService/GetOverallScoreForPeriod',
+        return $this->_simpleRequest('/categoryWeights.CategoryWeightsService/GetOverallScoreForPeriod',
         $argument,
-        ['\Score', 'decode'],
+        ['\CategoryWeights\Score', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \PeriodRange $argument input argument
+     * @param \CategoryWeights\PeriodRange $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetOverallScoreChangeForPeriodRange(\PeriodRange $argument,
+    public function GetOverallScoreChangeForPeriodRange(\CategoryWeights\PeriodRange $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/CategoryWeightsService/GetOverallScoreChangeForPeriodRange',
+        return $this->_simpleRequest('/categoryWeights.CategoryWeightsService/GetOverallScoreChangeForPeriodRange',
         $argument,
-        ['\Score', 'decode'],
+        ['\CategoryWeights\Score', 'decode'],
         $metadata, $options);
     }
 

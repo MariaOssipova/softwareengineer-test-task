@@ -1,64 +1,64 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace ;
+namespace CategoryWeights;
 
 /**
  */
 class CategoryWeightsServiceStub {
 
     /**
-     * @param \Period $request client request
+     * @param \CategoryWeights\Period $request client request
      * @param \Grpc\ServerContext $context server request context
-     * @return \Category for response data, null if if error occured
+     * @return \CategoryWeights\Category for response data, null if if error occured
      *     initial metadata (if any) and status (if not ok) should be set to $context
      */
     public function GetScoresByCategoriesForPeriod(
-        \Period $request,
+        \CategoryWeights\Period $request,
         \Grpc\ServerContext $context
-    ): ?\Category {
+    ): ?\CategoryWeights\Category {
         $context->setStatus(\Grpc\Status::unimplemented());
         return null;
     }
 
     /**
-     * @param \Period $request client request
+     * @param \CategoryWeights\Period $request client request
      * @param \Grpc\ServerContext $context server request context
-     * @return \Ticket for response data, null if if error occured
+     * @return \CategoryWeights\Ticket for response data, null if if error occured
      *     initial metadata (if any) and status (if not ok) should be set to $context
      */
     public function GetScoresByTicketsForPeriod(
-        \Period $request,
+        \CategoryWeights\Period $request,
         \Grpc\ServerContext $context
-    ): ?\Ticket {
+    ): ?\CategoryWeights\Ticket {
         $context->setStatus(\Grpc\Status::unimplemented());
         return null;
     }
 
     /**
-     * @param \Period $request client request
+     * @param \CategoryWeights\Period $request client request
      * @param \Grpc\ServerContext $context server request context
-     * @return \Score for response data, null if if error occured
+     * @return \CategoryWeights\Score for response data, null if if error occured
      *     initial metadata (if any) and status (if not ok) should be set to $context
      */
     public function GetOverallScoreForPeriod(
-        \Period $request,
+        \CategoryWeights\Period $request,
         \Grpc\ServerContext $context
-    ): ?\Score {
+    ): ?\CategoryWeights\Score {
         $context->setStatus(\Grpc\Status::unimplemented());
         return null;
     }
 
     /**
-     * @param \PeriodRange $request client request
+     * @param \CategoryWeights\PeriodRange $request client request
      * @param \Grpc\ServerContext $context server request context
-     * @return \Score for response data, null if if error occured
+     * @return \CategoryWeights\Score for response data, null if if error occured
      *     initial metadata (if any) and status (if not ok) should be set to $context
      */
     public function GetOverallScoreChangeForPeriodRange(
-        \PeriodRange $request,
+        \CategoryWeights\PeriodRange $request,
         \Grpc\ServerContext $context
-    ): ?\Score {
+    ): ?\CategoryWeights\Score {
         $context->setStatus(\Grpc\Status::unimplemented());
         return null;
     }
@@ -71,28 +71,28 @@ class CategoryWeightsServiceStub {
     public final function getMethodDescriptors(): array
     {
         return [
-            '/CategoryWeightsService/GetScoresByCategoriesForPeriod' => new \Grpc\MethodDescriptor(
+            '/categoryWeights.CategoryWeightsService/GetScoresByCategoriesForPeriod' => new \Grpc\MethodDescriptor(
                 $this,
                 'GetScoresByCategoriesForPeriod',
-                '\Period',
+                '\CategoryWeights\Period',
                 \Grpc\MethodDescriptor::UNARY_CALL
             ),
-            '/CategoryWeightsService/GetScoresByTicketsForPeriod' => new \Grpc\MethodDescriptor(
+            '/categoryWeights.CategoryWeightsService/GetScoresByTicketsForPeriod' => new \Grpc\MethodDescriptor(
                 $this,
                 'GetScoresByTicketsForPeriod',
-                '\Period',
+                '\CategoryWeights\Period',
                 \Grpc\MethodDescriptor::UNARY_CALL
             ),
-            '/CategoryWeightsService/GetOverallScoreForPeriod' => new \Grpc\MethodDescriptor(
+            '/categoryWeights.CategoryWeightsService/GetOverallScoreForPeriod' => new \Grpc\MethodDescriptor(
                 $this,
                 'GetOverallScoreForPeriod',
-                '\Period',
+                '\CategoryWeights\Period',
                 \Grpc\MethodDescriptor::UNARY_CALL
             ),
-            '/CategoryWeightsService/GetOverallScoreChangeForPeriodRange' => new \Grpc\MethodDescriptor(
+            '/categoryWeights.CategoryWeightsService/GetOverallScoreChangeForPeriodRange' => new \Grpc\MethodDescriptor(
                 $this,
                 'GetOverallScoreChangeForPeriodRange',
-                '\PeriodRange',
+                '\CategoryWeights\PeriodRange',
                 \Grpc\MethodDescriptor::UNARY_CALL
             ),
         ];
