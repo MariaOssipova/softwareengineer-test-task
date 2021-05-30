@@ -6,3 +6,22 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: softwareengineer_test_task
+    volumes:
+      - type: volume
+        source: src
+        target: /var/www/src
+  softwareengineer_test_task_server:
+    build:
+      context: .
+      dockerfile: Server/Dockerfile
+    ports:
+      - 8084:80
+    volumes:
+      - ./Server:/var/www/html/
+      - type: volume
+        source: src
+        target: /var/www/src
+
+
+volumes:
+  src:
