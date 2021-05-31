@@ -1,11 +1,10 @@
 <?php
 
-namespace Server;
+namespace App\server;
 
 use CategoryWeights\Category;
 use CategoryWeights\CategoryWeightsServiceStub;
 use CategoryWeights\Period;
-use Grpc\RpcServer;
 use Grpc\ServerContext;
 
 class CategoryWeightsServer extends CategoryWeightsServiceStub {
@@ -18,11 +17,4 @@ class CategoryWeightsServer extends CategoryWeightsServiceStub {
 
     return null;
   }
-
-
 }
-
-$server = new RpcServer();
-$server->addHttp2Port('0.0.0.0:50051');
-$server->handle(new CategoryWeightsServer());
-$server->run();

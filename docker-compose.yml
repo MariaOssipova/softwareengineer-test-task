@@ -4,7 +4,7 @@ services:
   softwareengineer_test_task:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: client.Dockerfile
     container_name: softwareengineer_test_task
     volumes:
       - type: volume
@@ -13,15 +13,15 @@ services:
   softwareengineer_test_task_server:
     build:
       context: .
-      dockerfile: Server/Dockerfile
+      dockerfile: server.Dockerfile
     ports:
       - 8084:80
     volumes:
-      - ./Server:/var/www/html/
+      - .:/var/www/html/
+      - /var/www/html/vendor/
       - type: volume
         source: src
-        target: /var/www/src
-
+        target: /var/www/html/src
 
 volumes:
   src:

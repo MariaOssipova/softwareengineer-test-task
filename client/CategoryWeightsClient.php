@@ -10,6 +10,3 @@ class CategoryWeightsClient extends CategoryWeightsServiceClient {
     echo 'client';
   }
 }
-
-$client = new CategoryWeightsClient();
-$client->GetScoresByCategoriesForPeriod(new Period());
