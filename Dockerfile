@@ -32,6 +32,6 @@ ENV PATH "/grpc/cmake/build/third_party/protobuf:${PATH}"
 WORKDIR /var/www
 COPY protos /var/www
 
-RUN mkdir contracts & make proto
+RUN mkdir Contract & make proto
 
 EXPOSE 8084

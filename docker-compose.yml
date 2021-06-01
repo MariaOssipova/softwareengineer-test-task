@@ -10,8 +10,8 @@ services:
     volumes:
     - ./:/var/www
     - type: volume
-      source: contracts
-      target: /var/www/contracts
+      source: Contract
+      target: /var/www/Contract
   softwareengineer_test_task:
     build:
       context: .
@@ -20,8 +20,8 @@ services:
     volumes:
       - ./:/var/www
       - type: volume
-        source: contracts
-        target: /var/www/contracts
+        source: Contract
+        target: /var/www/Contract
 
 volumes:
-  contracts:
+  Contract:
