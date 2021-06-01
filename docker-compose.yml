@@ -1,26 +1,18 @@
 version: '3.8'
 
 services:
-  softwareengineer_test_task:
-    build:
-      context: .
-      dockerfile: client.Dockerfile
-    container_name: softwareengineer_test_task
-    volumes:
-      - type: volume
-        source: src
-        target: /var/www/src
   softwareengineer_test_task_server:
     build:
       context: .
-      dockerfile: server.Dockerfile
-    ports:
-      - 8084:80
+      dockerfile: Dockerfile
+    container_name: softwareengineer_test_task_server
+    command: php -S 0.0.0.0:8084
     volumes:
-      - .:/var/www/html/
-      - type: volume
-        source: src
-        target: /var/www/html/src
-
-volumes:
-  src:
+    - ./:/var/www
+  softwareengineer_test_task:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: softwareengineer_test_task
+    volumes:
+      - ./:/var/www

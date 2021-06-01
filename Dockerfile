@@ -33,3 +33,5 @@ WORKDIR /var/www
 COPY protos /var/www
 
 RUN mkdir src & make proto
+
+EXPOSE 8084
