@@ -30,7 +30,9 @@ ENV PATH "/grpc/cmake/build:${PATH}"
 ENV PATH "/grpc/cmake/build/third_party/protobuf:${PATH}"
 
 WORKDIR /var/www
-COPY protos /var/www
+COPY protos /var/www/protos
+COPY Makefile /var/www
+
 
 RUN mkdir Contract & make proto
 
