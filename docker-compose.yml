@@ -10,7 +10,7 @@ services:
     volumes:
     - ./:/var/www
     - type: volume
-      source: src
+      source: contracts
       target: /var/www/contracts
   softwareengineer_test_task:
     build:
@@ -19,6 +19,9 @@ services:
     container_name: softwareengineer_test_task
     volumes:
       - ./:/var/www
+      - type: volume
+        source: contracts
+        target: /var/www/contracts
 
 volumes:
-  src:
+  contracts:
