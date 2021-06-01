@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'a5418bee256068fb62332fe5c2947567d5a107bf',
+    'reference' => 'cec1c988e2d6dd0e98ec3de2edd71b76145a7b66',
     'name' => 'softwareengineer/test-task',
   ),
   'versions' => 
@@ -62,7 +62,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'a5418bee256068fb62332fe5c2947567d5a107bf',
+      'reference' => 'cec1c988e2d6dd0e98ec3de2edd71b76145a7b66',
     ),
   ),
 );

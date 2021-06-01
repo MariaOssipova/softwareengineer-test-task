@@ -4,7 +4,8 @@
   "require": {
     "grpc/grpc": "^v1.30.0",
     "google/protobuf": "^v3.12.2",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+	"ext-grpc": "*"
   },
   "autoload": {
     "psr-4": {
