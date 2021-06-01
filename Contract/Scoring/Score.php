@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Score extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>float percentage = 1;</code>
+     * Generated from protobuf field <code>int32 Score = 1;</code>
      */
-    protected $percentage = 0.0;
+    protected $Score = 0;
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class Score extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type float $percentage
+     *     @type int $Score
      * }
      */
     public function __construct($data = NULL) {
@@ -33,23 +33,23 @@ class Score extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>float percentage = 1;</code>
-     * @return float
+     * Generated from protobuf field <code>int32 Score = 1;</code>
+     * @return int
      */
-    public function getPercentage()
+    public function getScore()
     {
-        return $this->percentage;
+        return $this->Score;
     }
 
     /**
-     * Generated from protobuf field <code>float percentage = 1;</code>
-     * @param float $var
+     * Generated from protobuf field <code>int32 Score = 1;</code>
+     * @param int $var
      * @return $this
      */
-    public function setPercentage($var)
+    public function setScore($var)
     {
-        GPBUtil::checkFloat($var);
-        $this->percentage = $var;
+        GPBUtil::checkInt32($var);
+        $this->Score = $var;
 
         return $this;
     }

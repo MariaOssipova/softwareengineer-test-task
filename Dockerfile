@@ -36,4 +36,4 @@ COPY Makefile /var/www
 
 RUN mkdir Contract & make proto
 
-EXPOSE 8084
+EXPOSE 50051

@@ -2,16 +2,10 @@
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-/*use App\server\ScoringServerFacade;
+use App\Facade\ScoringServerFacade;
 use Grpc\RpcServer;
 
 $server = new RpcServer([]);
 $server->addHttp2Port('0.0.0.0:50051');
-$server->handle(new ScoringServerFacade());
+$server->handle(ScoringServerFacade::getScoringServerFacade());
 $server->run();
-*/
-
-use App\Facade\ScoringServerFacade;
-
-$facade = ScoringServerFacade::getScoringServerFacade();
-$facade->GetScoresByCategoriesForPeriod(new \Scoring\Period(), new \Grpc\ServerContext(null));

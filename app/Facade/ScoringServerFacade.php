@@ -5,9 +5,11 @@ namespace App\Facade;
 use App\DAO\ScoringDAO;
 use App\Repository\DatabaseRepository;
 use App\Util\Database\SQLiteClient;
-use Scoring\Category;
+use Scoring\ScoresByCategories;
+use Scoring\ScoresByTickets;
 use Scoring\ScoringServiceStub;
 use Scoring\Period;
+use Scoring\Score;
 use Grpc\ServerContext;
 
 class ScoringServerFacade extends ScoringServiceStub {
@@ -29,11 +31,27 @@ class ScoringServerFacade extends ScoringServiceStub {
 		return $this->scoringDAO;
 	}
 
-	public function GetScoresByCategoriesForPeriod(Period $request, ServerContext $context): ?Category {
+	public function GetScoresByCategoriesForPeriod(Period $request, ServerContext $context): ?ScoresByCategories {
 		$DAO = $this->getScoringDAO();
 
-		$DAO->getScoresByCategoriesForPeriod();
+		return $DAO->getScoresByCategoriesForPeriod($request);
+	}
 
-		return null;
+	public function GetScoresByTicketsForPeriod(Period $request, ServerContext $context): ?ScoresByTickets {
+		$DAO = $this->getScoringDAO();
+
+		return $DAO->getScoresByTicketsForPeriod($request);
+	}
+
+	public function GetOverallScoreForPeriod(Period $request, ServerContext $context): ?Score {
+		$DAO = $this->getScoringDAO();
+
+		return $DAO->getOverallScoreForPeriod($request);
+	}
+
+	public function GetOverallScoreChangeForPeriodRange(Period $request, ServerContext $context): ?Score {
+		$DAO = $this->getScoringDAO();
+
+		return $DAO->getOverallScoreChangeForPeriodRange($request);
 	}
 }

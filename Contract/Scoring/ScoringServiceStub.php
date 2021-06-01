@@ -10,13 +10,13 @@ class ScoringServiceStub {
     /**
      * @param \Scoring\Period $request client request
      * @param \Grpc\ServerContext $context server request context
-     * @return \Scoring\Category for response data, null if if error occured
+     * @return \Scoring\ScoresByCategories for response data, null if if error occured
      *     initial metadata (if any) and status (if not ok) should be set to $context
      */
     public function GetScoresByCategoriesForPeriod(
         \Scoring\Period $request,
         \Grpc\ServerContext $context
-    ): ?\Scoring\Category {
+    ): ?\Scoring\ScoresByCategories {
         $context->setStatus(\Grpc\Status::unimplemented());
         return null;
     }
@@ -24,13 +24,13 @@ class ScoringServiceStub {
     /**
      * @param \Scoring\Period $request client request
      * @param \Grpc\ServerContext $context server request context
-     * @return \Scoring\Ticket for response data, null if if error occured
+     * @return \Scoring\ScoresByTickets for response data, null if if error occured
      *     initial metadata (if any) and status (if not ok) should be set to $context
      */
     public function GetScoresByTicketsForPeriod(
         \Scoring\Period $request,
         \Grpc\ServerContext $context
-    ): ?\Scoring\Ticket {
+    ): ?\Scoring\ScoresByTickets {
         $context->setStatus(\Grpc\Status::unimplemented());
         return null;
     }
@@ -50,13 +50,13 @@ class ScoringServiceStub {
     }
 
     /**
-     * @param \Scoring\PeriodRange $request client request
+     * @param \Scoring\Period $request client request
      * @param \Grpc\ServerContext $context server request context
      * @return \Scoring\Score for response data, null if if error occured
      *     initial metadata (if any) and status (if not ok) should be set to $context
      */
     public function GetOverallScoreChangeForPeriodRange(
-        \Scoring\PeriodRange $request,
+        \Scoring\Period $request,
         \Grpc\ServerContext $context
     ): ?\Scoring\Score {
         $context->setStatus(\Grpc\Status::unimplemented());
@@ -92,7 +92,7 @@ class ScoringServiceStub {
             '/scoring.ScoringService/GetOverallScoreChangeForPeriodRange' => new \Grpc\MethodDescriptor(
                 $this,
                 'GetOverallScoreChangeForPeriodRange',
-                '\Scoring\PeriodRange',
+                '\Scoring\Period',
                 \Grpc\MethodDescriptor::UNARY_CALL
             ),
         ];

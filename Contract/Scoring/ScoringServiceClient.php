@@ -26,7 +26,7 @@ class ScoringServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/scoring.ScoringService/GetScoresByCategoriesForPeriod',
         $argument,
-        ['\Scoring\Category', 'decode'],
+        ['\Scoring\ScoresByCategories', 'decode'],
         $metadata, $options);
     }
 
@@ -40,7 +40,7 @@ class ScoringServiceClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/scoring.ScoringService/GetScoresByTicketsForPeriod',
         $argument,
-        ['\Scoring\Ticket', 'decode'],
+        ['\Scoring\ScoresByTickets', 'decode'],
         $metadata, $options);
     }
 
@@ -59,12 +59,12 @@ class ScoringServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Scoring\PeriodRange $argument input argument
+     * @param \Scoring\Period $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetOverallScoreChangeForPeriodRange(\Scoring\PeriodRange $argument,
+    public function GetOverallScoreChangeForPeriodRange(\Scoring\Period $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/scoring.ScoringService/GetOverallScoreChangeForPeriodRange',
         $argument,

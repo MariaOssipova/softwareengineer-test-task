@@ -3,39 +3,54 @@ syntax = "proto3";
 package scoring;
 
 
-message PeriodRange {
-    Period previous_period = 1;
-    Period current_period = 2;
-}
-
 message Period {
-    int32 year = 1;
-    int32 month = 2;
-    int32 day = 3;
+  Date StartDate = 1;
+  Date EndDate = 2;
 }
 
-message Category {
-    string category_name = 1;
-    float ratings = 2;
-    repeated Score score_for_date = 3;
-    Score overall_score = 4;
-}
-
-message Ticket {
-    int32 ticket_id = 1;
-    repeated Score score = 2;
+message Date {
+  int64 Date = 1;
 }
 
 message Score {
-    float percentage = 1;
+  int32 Score = 1;
+}
+
+message DateScore {
+  string Date = 1;
+  int32 Score = 2;
+}
+
+message CategoryScore {
+  string CategoryName = 1;
+  int32 Score = 2;
+}
+
+message ScoresByCategories {
+  repeated ScoreByCategory ScoresByCategories = 1;
+}
+
+message ScoreByCategory {
+  CategoryScore CategoryScore = 1;
+  int32 Ratings = 2;
+  repeated DateScore DateScores = 3;
+}
+
+message ScoreByTicket {
+  int32 TicketId = 1;
+  repeated CategoryScore CategoryScores = 2;
+}
+
+message ScoresByTickets {
+  repeated ScoreByTicket ScoresByTickets = 1;
 }
 
 service ScoringService {
-    rpc GetScoresByCategoriesForPeriod(Period) returns (Category) {}
+  rpc GetScoresByCategoriesForPeriod(Period) returns (ScoresByCategories) {}
 
-    rpc GetScoresByTicketsForPeriod(Period) returns (Ticket) {}
+  rpc GetScoresByTicketsForPeriod(Period) returns (ScoresByTickets) {}
 
-    rpc GetOverallScoreForPeriod(Period) returns (Score) {}
+  rpc GetOverallScoreForPeriod(Period) returns (Score) {}
 
-    rpc GetOverallScoreChangeForPeriodRange(PeriodRange) returns (Score) {}
+  rpc GetOverallScoreChangeForPeriodRange(Period) returns (Score) {}
 }
