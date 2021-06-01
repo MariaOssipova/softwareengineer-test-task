@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'cec1c988e2d6dd0e98ec3de2edd71b76145a7b66',
+    'reference' => 'bfb121884d81c57b613319c347fb6cb5304ee40c',
     'name' => 'softwareengineer/test-task',
   ),
   'versions' => 
@@ -36,7 +36,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'cec1c988e2d6dd0e98ec3de2edd71b76145a7b66',
+      'reference' => 'bfb121884d81c57b613319c347fb6cb5304ee40c',
     ),
   ),
 );

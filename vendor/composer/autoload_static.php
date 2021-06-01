@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit20f5b538752f58835a102cc07b2f83e3
 {
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Scoring\\' => 8,
+        ),
         'G' => 
         array (
             'Grpc\\' => 5,
@@ -16,7 +20,7 @@ class ComposerStaticInit20f5b538752f58835a102cc07b2f83e3
         ),
         'C' => 
         array (
-            'CategoryWeights\\' => 16,
+            'Client\\' => 7,
         ),
         'A' => 
         array (
@@ -25,6 +29,10 @@ class ComposerStaticInit20f5b538752f58835a102cc07b2f83e3
     );
 
     public static $prefixDirsPsr4 = array (
+        'Scoring\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Contract/Scoring',
+        ),
         'Grpc\\' => 
         array (
             0 => __DIR__ . '/..' . '/grpc/grpc/src/lib',
@@ -41,9 +49,9 @@ class ComposerStaticInit20f5b538752f58835a102cc07b2f83e3
         array (
             0 => __DIR__ . '/../..' . '/Contract/GPBMetadata',
         ),
-        'CategoryWeights\\' => 
+        'Client\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/Contract/CategoryWeights',
+            0 => __DIR__ . '/../..' . '/Client',
         ),
         'App\\' => 
         array (

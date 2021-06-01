@@ -5,12 +5,12 @@ namespace App\Facade;
 use App\DAO\ScoringDAO;
 use App\Repository\DatabaseRepository;
 use App\Util\Database\SQLiteClient;
-use CategoryWeights\Category;
-use CategoryWeights\CategoryWeightsServiceStub;
-use CategoryWeights\Period;
+use Scoring\Category;
+use Scoring\ScoringServiceStub;
+use Scoring\Period;
 use Grpc\ServerContext;
 
-class ScoringServerFacade extends CategoryWeightsServiceStub {
+class ScoringServerFacade extends ScoringServiceStub {
 
 	private $scoringDAO;
 

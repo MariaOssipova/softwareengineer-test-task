@@ -13,7 +13,8 @@
         "Contract/GPBMetadata/"
       ],
       "App\\": "app/",
-      "CategoryWeights\\": "Contract/CategoryWeights/"
+      "Scoring\\": "Contract/Scoring/",
+	  "Client\\": "Client/"
     }
   },
   "scripts": {

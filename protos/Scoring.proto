@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package categoryWeights;
+package scoring;
 
 
 message PeriodRange {
@@ -30,7 +30,7 @@ message Score {
     float percentage = 1;
 }
 
-service CategoryWeightsService {
+service ScoringService {
     rpc GetScoresByCategoriesForPeriod(Period) returns (Category) {}
 
     rpc GetScoresByTicketsForPeriod(Period) returns (Ticket) {}

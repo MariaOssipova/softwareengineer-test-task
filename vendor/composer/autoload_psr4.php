@@ -6,10 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Scoring\\' => array($baseDir . '/Contract/Scoring'),
     'Grpc\\' => array($vendorDir . '/grpc/grpc/src/lib'),
     'Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/Google/Protobuf'),
     'GPBMetadata\\Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf'),
     'GPBMetadata\\' => array($baseDir . '/Contract/GPBMetadata'),
-    'CategoryWeights\\' => array($baseDir . '/Contract/CategoryWeights'),
+    'Client\\' => array($baseDir . '/Client'),
     'App\\' => array($baseDir . '/app'),
 );

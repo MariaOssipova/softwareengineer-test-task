@@ -14,4 +14,4 @@ $server->run();
 use App\Facade\ScoringServerFacade;
 
 $facade = ScoringServerFacade::getScoringServerFacade();
-$facade->GetScoresByCategoriesForPeriod(new \CategoryWeights\Period(), new \Grpc\ServerContext(null));
+$facade->GetScoresByCategoriesForPeriod(new \Scoring\Period(), new \Grpc\ServerContext(null));
