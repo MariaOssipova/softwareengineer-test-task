@@ -39,11 +39,11 @@ class ComposerStaticInit20f5b538752f58835a102cc07b2f83e3
         ),
         'GPBMetadata\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/GPBMetadata',
+            0 => __DIR__ . '/../..' . '/Contract/GPBMetadata',
         ),
         'CategoryWeights\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/CategoryWeights',
+            0 => __DIR__ . '/../..' . '/Contract/CategoryWeights',
         ),
         'App\\' => 
         array (

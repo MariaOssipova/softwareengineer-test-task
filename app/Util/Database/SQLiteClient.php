@@ -6,18 +6,19 @@ use PDO;
 
 class SQLiteClient {
 
-	private $pdoInstance;
-
-	public function __construct(PDO $pdoInstance) {
-		$this->pdoInstance = $pdoInstance;
-	}
+	private $PDO;
 
 	public function getPDOInstance(): PDO {
-		return $this->pdoInstance;
+		if (!isset($this->PDO)) {
+			$this->PDO = PDOFactory::getPDOObject();
+		}
+
+		return $this->PDO;
 	}
 
 	public function runQuery(string $query, array $args = []): DatabaseStatement {
 		$PDO = $this->getPDOInstance();
+		$PDO->setAttribute(PDO::ATTR_STATEMENT_CLASS, [DatabaseStatement::class]);
 
 		/** @var DatabaseStatement $statement */
 		$statement = $PDO->prepare($query);

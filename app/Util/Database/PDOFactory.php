@@ -11,6 +11,6 @@ class PDOFactory {
 	}
 
 	private static function getPathToSQLiteFile(): string {
-		return '/database.db';
+		return '../Util/Database/database.db';
 	}
 }

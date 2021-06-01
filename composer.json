@@ -9,10 +9,10 @@
   "autoload": {
     "psr-4": {
       "GPBMetadata\\": [
-        "GPBMetadata/"
+        "Contract/GPBMetadata/"
       ],
       "App\\": "app/",
-      "CategoryWeights\\": "src/CategoryWeights/"
+      "CategoryWeights\\": "Contract/CategoryWeights/"
     }
   },
   "scripts": {

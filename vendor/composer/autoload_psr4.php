@@ -9,7 +9,7 @@ return array(
     'Grpc\\' => array($vendorDir . '/grpc/grpc/src/lib'),
     'Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/Google/Protobuf'),
     'GPBMetadata\\Google\\Protobuf\\' => array($vendorDir . '/google/protobuf/src/GPBMetadata/Google/Protobuf'),
-    'GPBMetadata\\' => array($baseDir . '/GPBMetadata'),
-    'CategoryWeights\\' => array($baseDir . '/src/CategoryWeights'),
+    'GPBMetadata\\' => array($baseDir . '/Contract/GPBMetadata'),
+    'CategoryWeights\\' => array($baseDir . '/Contract/CategoryWeights'),
     'App\\' => array($baseDir . '/app'),
 );
