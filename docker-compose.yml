@@ -6,9 +6,12 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: softwareengineer_test_task_server
-    command: php -S 0.0.0.0:8084
+    entrypoint: php -S 0.0.0.0:8084
     volumes:
     - ./:/var/www
+    - type: volume
+      source: src
+      target: /var/www/contracts
   softwareengineer_test_task:
     build:
       context: .
@@ -16,3 +19,6 @@ services:
     container_name: softwareengineer_test_task
     volumes:
       - ./:/var/www
+
+volumes:
+  src:
