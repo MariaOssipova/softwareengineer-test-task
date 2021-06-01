@@ -1,6 +1,6 @@
 <?php
 
-namespace App\server;
+namespace App\Facade;
 
 use CategoryWeights\Category;
 use CategoryWeights\CategoryWeightsServiceStub;
