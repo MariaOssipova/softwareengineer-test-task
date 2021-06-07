@@ -24,6 +24,8 @@ class ScoringClient extends ScoringServiceClient {
 			exit(1);
 		}
 
+		return;
+
 		/** @var ScoreByCategory $score */
 		foreach ($response->getScoresByCategories() as $score) {
 
@@ -55,13 +57,13 @@ class ScoringClient extends ScoringServiceClient {
 
 		/** @var ScoreByTicket $scoreByTicket */
 		foreach ($response->getScoresByTickets() as $scoreByTicket) {
-			echo $scoreByTicket->getTicketId();
-			echo ' | ';
+			echo 'Ticket ID: ' . $scoreByTicket->getTicketId();
 			$categoryScoresIterator = $scoreByTicket->getCategoryScores()->getIterator();
 			do {
 				/** @var CategoryScore $categoryScore */
 				$categoryScore = $categoryScoresIterator->current();
-				echo $categoryScore->getCategoryName() . ': ' . $categoryScore->getScore() . ' | ';
+				echo ' | Category name: ' . $categoryScore->getCategoryName();
+				echo ', Score: ' . $categoryScore->getScore() . ' | ';
 				$categoryScoresIterator->next();
 			} while ($categoryScoresIterator->valid());
 			echo "\n";
@@ -78,7 +80,7 @@ class ScoringClient extends ScoringServiceClient {
 
 		return;
 
-		echo $response->getScore();
+		echo 'Overall score: ' . $response->getScore();
 	}
 
 	public function getOverallScoreChangeForPeriodRange(Period $argument, $metadata = [], $options = []) {
