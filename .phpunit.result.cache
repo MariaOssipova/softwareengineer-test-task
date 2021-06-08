@@ -1,1 +1,0 @@
-{"version":1,"defects":{"App\\Util\\HelperTest::testGetNiceDateTime":3,"App\\Util\\HelperTest::testGetNiceDateTimeThrowsException":3,"App\\Util\\HelperTest::testGetUnixTimestamp":3},"times":{"App\\Util\\HelperTest::testGetNiceDateTime":0.037,"App\\Util\\HelperTest::testGetNiceDateTimeThrowsException":0.04,"App\\Util\\HelperTest::testGetUnixTimestamp":0}}
