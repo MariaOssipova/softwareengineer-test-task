@@ -1,4 +1,4 @@
-#Description
+# Description
 
 As installing gRPC for PHP requires changes in the php.ini files, the easiest way is to install everything inside Docker container.
 
