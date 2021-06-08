@@ -1,5 +1,8 @@
 # Description
 
+Run ``` git clone https://github.com/MariaOssipova/softwareengineer-test-task.git ``` in your desired directory.
+Run ``` cd softwareengineer-test-task ```. 
+
 As installing gRPC for PHP requires changes in the php.ini files, the easiest way is to install everything inside Docker container.
 
 In order to run application run ``` docker-compose up -d --build ```. Installing gRPC will take time, approximately 15 minutes.
