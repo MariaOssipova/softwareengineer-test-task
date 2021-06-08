@@ -10,14 +10,14 @@ use App\Util\Helper;
 
 $client = new ScoringClient("localhost:50051", ["credentials" => ChannelCredentials::createInsecure()]);
 $client->getScoresByTicketsForPeriod(new Period([
-	'StartDate' => new Date(['Date' => Helper::getTimestamp('2019-02-24')]),
-	'EndDate' => new Date(['Date' => Helper::getTimestamp('2019-02-25')]),
+	'StartDate' => new Date(['Date' => Helper::getDurationInSeconds('2019-02-24')]),
+	'EndDate' => new Date(['Date' => Helper::getDurationInSeconds('2019-02-25')]),
 ]));
 $client->getOverallScoreForPeriod(new Period([
-	'StartDate' => new Date(['Date' => Helper::getTimestamp('2019-02-24')]),
-	'EndDate' => new Date(['Date' => Helper::getTimestamp('2019-02-25')]),
+	'StartDate' => new Date(['Date' => Helper::getDurationInSeconds('2019-02-24')]),
+	'EndDate' => new Date(['Date' => Helper::getDurationInSeconds('2019-02-25')]),
 ]));
 $client->getScoresByCategoriesForPeriod(new Period([
-	'StartDate' => new Date(['Date' => Helper::getTimestamp('2019-02-24')]),
-	'EndDate' => new Date(['Date' => Helper::getTimestamp('2019-02-25')]),
+	'StartDate' => new Date(['Date' => Helper::getDurationInSeconds('2019-02-24')]),
+	'EndDate' => new Date(['Date' => Helper::getDurationInSeconds('2019-02-25')]),
 ]));

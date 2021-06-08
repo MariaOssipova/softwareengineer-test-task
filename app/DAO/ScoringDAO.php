@@ -120,7 +120,7 @@ class ScoringDAO extends AbstractDAO {
 
 			foreach ($categoryValues['dates'] as $date => $score) {
 				$dateScores[] = new DateScore([
-					'Date' => Helper::getTimestamp($date),
+					'Date' => Helper::getDurationInSeconds($date),
 					'Score' => $score,
 				]);
 			}

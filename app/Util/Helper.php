@@ -14,7 +14,7 @@ class Helper {
 		}
 	}
 
-	public static function getTimestamp(string $dateTime): int {
+	public static function getDurationInSeconds(string $dateTime): int {
 		$timestamp = strtotime($dateTime);
 		if ($timestamp) {
 			return $timestamp;
