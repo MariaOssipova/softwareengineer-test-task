@@ -2,22 +2,30 @@
   "name": "softwareengineer/test-task",
   "description": "Software Engineer Test Task",
   "require": {
-    "grpc/grpc": "^v1.30.0",
-    "google/protobuf": "^v3.12.2",
-    "ext-pdo": "*",
+	"grpc/grpc": "^v1.30.0",
+	"google/protobuf": "^v3.12.2",
+	"ext-pdo": "*",
 	"ext-grpc": "*"
   },
   "autoload": {
-    "psr-4": {
-      "GPBMetadata\\": [
-        "Contract/GPBMetadata/"
-      ],
-      "App\\": "app/",
-      "Scoring\\": "Contract/Scoring/",
+	"psr-4": {
+	  "GPBMetadata\\": [
+		"Contract/GPBMetadata/"
+	  ],
+	  "App\\": "app/",
+	  "Scoring\\": "Contract/Scoring/",
 	  "Client\\": "Client/"
-    }
+	}
+  },
+  "autoload-dev": {
+	"classmap": [
+	  "tests/"
+	]
   },
   "scripts": {
-    "dump-autoload": "composer dump-autoload"
+	"dump-autoload": "composer dump-autoload"
+  },
+  "require-dev": {
+	"phpunit/phpunit": "^8.5"
   }
 }
