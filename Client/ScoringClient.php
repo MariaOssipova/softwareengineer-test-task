@@ -24,8 +24,6 @@ class ScoringClient extends ScoringServiceClient {
 			exit(1);
 		}
 
-		return;
-
 		/** @var ScoreByCategory $score */
 		foreach ($response->getScoresByCategories() as $score) {
 
@@ -53,8 +51,6 @@ class ScoringClient extends ScoringServiceClient {
 			exit(1);
 		}
 
-		return;
-
 		/** @var ScoreByTicket $scoreByTicket */
 		foreach ($response->getScoresByTickets() as $scoreByTicket) {
 			echo 'Ticket ID: ' . $scoreByTicket->getTicketId();
@@ -77,8 +73,6 @@ class ScoringClient extends ScoringServiceClient {
 			echo "ERROR: " . $status->code . ", " . $status->details . PHP_EOL;
 			exit(1);
 		}
-
-		return;
 
 		echo 'Overall score: ' . $response->getScore();
 	}

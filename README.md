@@ -1,3 +1,14 @@
+#Description
+
+As installing gRPC for PHP requires changes in the php.ini files, the easiest way is to install everything inside Docker container.
+
+In order to run application run ``` docker-compose up -d --build ```. Installing gRPC will take time, approximately 15 minutes.
+
+When this is done, log in to docker container and run ``` php -f index.php ``` from app/Facade directory. Server will now start listening to gRPC requests.
+
+For a nice data representation, client was created. As gRPC is not installed locally, you should once again log in to docker container from another terminal window and run ``` php -f index.php ``` inside Client directory.
+
+
 # Software Engineer Test Task
 
 As a test task for [Klaus](https://www.klausapp.com) software engineering position we ask our candidates to build a small [gRPC](https://grpc.io) service using language of their choice. Prefered language for new services in Klaus is [Go](https://golang.org).
